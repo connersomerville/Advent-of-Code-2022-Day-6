@@ -13,9 +13,9 @@ lineReader.on("line", (line) => {
 });
 
 lineReader.on("close", () => {
-  for (let start = 0, end = 4; end < buffer.length; start++, end++) {
+  for (let start = 0, end = 14; end < buffer.length; start++, end++) {
     const substring = buffer.slice(start, end);
-    const marker = new Set(substring.split("")).size === 4;
+    const marker = new Set(substring.split("")).size === 14;
 
     if (marker) {
       console.log(`Marker found at ${end} substring ${substring}`);
